@@ -5,7 +5,8 @@ import {
   TbBuildingFactory, TbLayoutDashboard, TbShoppingCart, TbPackage,
   TbTool, TbUsers, TbTruck, TbHammer, TbChartBar,
   TbFileReport, TbBrain, TbBell, TbUser, TbSettings,
-  TbChevronLeft, TbChevronRight, TbLogout, TbSparkles
+  TbChevronLeft, TbChevronRight, TbLogout, TbSparkles,
+  TbCreditCard, TbKey, TbShieldCheck
 } from 'react-icons/tb'
 
 const navGroups = [
@@ -37,6 +38,7 @@ const navGroups = [
       { icon: TbChartBar, label: 'Analytics', path: '/app/analytics' },
       { icon: TbFileReport, label: 'Reports', path: '/app/reports' },
       { icon: TbBrain, label: 'AI Assistant', path: '/app/ai-assistant', badge: 'AI' },
+      { icon: TbSparkles, label: 'AI Copilot', path: '/app/ai-copilot', badge: 'NEW' },
     ]
   },
   {
@@ -45,6 +47,14 @@ const navGroups = [
       { icon: TbBell, label: 'Notifications', path: '/app/notifications', badge: '3' },
       { icon: TbUser, label: 'Profile', path: '/app/profile' },
       { icon: TbSettings, label: 'Settings', path: '/app/settings' },
+    ]
+  },
+  {
+    label: 'Billing & Admin',
+    items: [
+      { icon: TbCreditCard, label: 'Billing', path: '/app/billing' },
+      { icon: TbKey, label: 'API Keys', path: '/app/api-keys' },
+      { icon: TbShieldCheck, label: 'Admin Panel', path: '/app/admin' },
     ]
   }
 ]

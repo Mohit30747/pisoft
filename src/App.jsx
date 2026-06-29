@@ -20,6 +20,11 @@ import Profile from './pages/Profile.jsx'
 import Settings from './pages/Settings.jsx'
 import Maintenance from './pages/Maintenance.jsx'
 import NotFound from './pages/NotFound.jsx'
+// New pages
+import AdminDashboard from './pages/admin/AdminDashboard.jsx'
+import AIFactoryCopilot from './pages/AIFactoryCopilot.jsx'
+import Billing from './pages/Billing.jsx'
+import APIKeys from './pages/APIKeys.jsx'
 
 const pageVariants = {
   initial: {
@@ -75,6 +80,11 @@ const AnimatedAIAssistant = () => <PageWrapper><AIAssistant /></PageWrapper>
 const AnimatedNotifications = () => <PageWrapper><Notifications /></PageWrapper>
 const AnimatedProfile = () => <PageWrapper><Profile /></PageWrapper>
 const AnimatedSettings = () => <PageWrapper><Settings /></PageWrapper>
+// New animated pages
+const AnimatedAdminDashboard = () => <PageWrapper><AdminDashboard /></PageWrapper>
+const AnimatedAICopilot = () => <PageWrapper><AIFactoryCopilot /></PageWrapper>
+const AnimatedBilling = () => <PageWrapper><Billing /></PageWrapper>
+const AnimatedAPIKeys = () => <PageWrapper><APIKeys /></PageWrapper>
 
 export default function App() {
   const location = useLocation()
@@ -102,6 +112,11 @@ export default function App() {
             <Route path="notifications" element={<AnimatedNotifications />} />
             <Route path="profile" element={<AnimatedProfile />} />
             <Route path="settings" element={<AnimatedSettings />} />
+            {/* New routes */}
+            <Route path="admin" element={<AnimatedAdminDashboard />} />
+            <Route path="ai-copilot" element={<AnimatedAICopilot />} />
+            <Route path="billing" element={<AnimatedBilling />} />
+            <Route path="api-keys" element={<AnimatedAPIKeys />} />
           </Route>
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
         </Routes>
